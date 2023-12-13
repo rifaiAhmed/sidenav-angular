@@ -10,13 +10,8 @@ export const notifications = [
         description: 'lorem ipsum lorem ipsum dolor sit jamet',
     },
     {
-        icon : 'far fa-cloud-download',
-        subject : 'download complete',
-        description: 'lorem ipsum lorem ipsum dolor sit jamet',
-    },
-    {
-        icon : 'far fa-cloud-download',
-        subject : 'download complete',
+        icon : 'far fa-trash',
+        subject : 'trash files',
         description: 'lorem ipsum lorem ipsum dolor sit jamet',
     },
 ];

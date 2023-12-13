@@ -83,7 +83,7 @@
                         border: 1px solid transparent;
                         border-radius: 50%;
                         margin-left: 50px;
-                        outline: 0;
+                        outline: 1;
                         color: #495057;
 
                         .flag {
@@ -95,7 +95,7 @@
 
                     .head-menu-item-btn:hover,
                     .head-menu-item-btn:focus {
-                        background: #eff2f3;
+                        /* background: #eff2f3; */
                         .menu-icon {
                             color: #699dfa;
                         }
@@ -168,7 +168,7 @@
 .overlay {
     background: #fff;
     margin-top: 10px;
-    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 13%);
     border-radius: 0.25rem;
 }
 
@@ -192,6 +192,14 @@
         border: 1px solid #ced4da;
         outline: none;
         border-radius: 0.25rem;
+    }
+
+    .search-btn {
+        color: #fff;
+        background-color: #699dfa;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 0.47rem 0.75rem;
     }
 }
 
@@ -249,4 +257,45 @@
             }
         }
     }
+}
+
+.overlay-user {
+    ul {
+        padding: 0.5rem;
+        list-style: none;
+        width: 11rem;
+
+        li {
+            padding: 0.35rem 1.5rem;
+            font-size: 14px;
+            font-weight: 400;
+            color: #495057;
+            cursor: pointer;
+
+            .icon {
+                margin-right: 0.6rem;
+            }
+        }
+
+        li:hover {
+            background: #eff2f3;
+        }
+    }
+}
+
+.ripple {
+    background-position: center;
+    background-color: #fff;
+    transition: background 0.8s;
+}
+
+.ripple:hover,
+.ripple:focus {
+    background: #eff2f3 radial-gradient(circle, transparent 1%, #eff2f3 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: #bec2c4;
+    background-size: 100%;
+    transition: background 0s;
 }

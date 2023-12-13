@@ -1,7 +1,9 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
   <div class="logo-container">
-    <button class="logo" (click)="toggleCollapse()">A</button>
-    <div class="logo-text" @fadeInOut *ngIf="collapsed">Angular</div>
+    <button class="logo" (click)="toggleCollapse()">
+      <img src="../../assets/beeloft.png" alt="user" class="logo-avatar" />
+    </button>
+    <div class="logo-text" @fadeInOut *ngIf="collapsed">Beeloft</div>
     <button
       class="btn-close"
       @rotate

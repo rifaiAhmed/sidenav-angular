@@ -26,7 +26,7 @@
       <div class="head-menu">
         <div class="head-menu-item">
           <button class="head-menu-item-btn ripple">
-            <img [src]="'assets/flag/us.jpg'" class="flag" alt="flag" />
+            <img [src]="'assets/flag/indo.png'" class="flag" alt="flag" />
           </button>
         </div>
         <div class="head-menu-item">
@@ -42,15 +42,10 @@
             <i class="far fa-bell menu-icon"></i>
           </button>
         </div>
-        <div class="head-menu-item">
-          <button class="head-menu-item-btn ripple">
-            <i class="far fa-comment-alt menu-icon"></i>
-          </button>
-        </div>
       </div>
-      <div class="head-user-avatar-container">
+      <div class="head-user-avatar-container" [cdkMenuTriggerFor]="userOverlay">
         <div class="head-user-avatar">
-          <img src="../../assets/user3.jpg" alt="user" class="user-avatar" />
+          <img src="../../assets/user.png" alt="user" class="user-avatar" />
           <div class="circle-indicator pulse"></div>
         </div>
       </div>
@@ -59,7 +54,7 @@
 </div>
 <ng-template #searchOverLay>
   <div class="overlay overlay-search overlay-fall" cdkMenu>
-    <input type="search" name="search" id="" placeholder="Search..." />
+    <input type="search" class="search" id="" placeholder="Search..." />
     <button class="search-btn">
       <i class="far fa-search search-icon"></i>
     </button>
@@ -85,6 +80,17 @@
         <p class="notification-desc">
           {{ notification.description }}
         </p>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+
+<ng-template #userOverlay>
+  <div class="overlay overlay-user overlay-fall" cdkMenu>
+    <ul>
+      <li *ngFor="let item of userItems" cdkMenuItem>
+        <a [ngClass]="item.icon" class="icon"></a>
+        <span>{{ item.label }}</span>
       </li>
     </ul>
   </div>
