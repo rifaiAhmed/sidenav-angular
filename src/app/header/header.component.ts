@@ -1,5 +1,7 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { notifications, userItems } from './header-dummy-data';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +16,7 @@ export class HeaderComponent {
   notifications = notifications;
   userItems = userItems;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event : any) {
@@ -41,5 +43,36 @@ export class HeaderComponent {
     } else {
       this.canShowAsOverLay = false;
     }
+  }
+
+  logOut(): void {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to exit!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Exit!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+        setTimeout(() => {
+          this.router.navigate(['/dashboard']);
+        }, 1000);
+      }
+    });
+  }
+
+  redirectToProfile():void {
+    this.router.navigate(['/pages']);
+  }
+
+  redirectToSettings():void {
+    this.router.navigate(['/settings']);
   }
 }

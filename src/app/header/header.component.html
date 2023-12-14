@@ -88,9 +88,17 @@
 <ng-template #userOverlay>
   <div class="overlay overlay-user overlay-fall" cdkMenu>
     <ul>
-      <li *ngFor="let item of userItems" cdkMenuItem>
-        <a [ngClass]="item.icon" class="icon"></a>
-        <span>{{ item.label }}</span>
+      <li (click)="redirectToProfile()" cdkMenuItem>
+        <a class="far fa-user" class="icon"></a>
+        <span>Profile</span>
+      </li>
+      <li (click)="redirectToSettings()" cdkMenuItem>
+        <a class="far fa-cog" class="icon"></a>
+        <span>Settings</span>
+      </li>
+      <li (click)="logOut()" cdkMenuItem>
+        <a class="far fa-power-off" class="icon"></a>
+        <span>Logout</span>
       </li>
     </ul>
   </div>

@@ -13,11 +13,11 @@ export const navbarData: INavbarData[] = [
         items: [
             {
                 routeLink: 'products/level-satu',
-                label: 'Level 1.1',
+                label: 'Product Type',
             },
             {
                 routeLink: 'products/level-dua',
-                label: 'Level 1.2',
+                label: 'Product Category',
             }
         ]
     },

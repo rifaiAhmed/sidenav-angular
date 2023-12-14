@@ -1,5 +1,5 @@
 .sidenav {
-    background : #B8860B;
+    background : #87CEFA;
     transition : all .5s ease;
     position : fixed;
     z-index : 2;
@@ -117,7 +117,7 @@
 }
 
 .active-sublevel {
-    color: #f3f3f3 !important;
+    color: #000 !important;
     /* opacity: 1 !important; */
 }
 
@@ -139,27 +139,26 @@
             display: flex;
             align-items: center;
             height: 3rem;
-            color: #000;
+            color: #f3f3f3;
             text-decoration: none;
             border-radius: 0.625rem;
             transition: all .3s ease;
 
             .sublevel-link-icon {
-                font-size: 4px;
-                width: 2rem;
-                min-width: 2rem;
+                font-size: 10px;
+                width: 3rem;
+                min-width: 3rem;
                 margin: 0 0.5rem;
                 text-align: center;
             }
 
             .sublevel-link-text {
                 margin-left: 0.8rem;
-
             }
         }
 
         .sublevel-nav-link:hover {
-            color: #f3f3f3;
+            color: #000;
         }
     }
 }

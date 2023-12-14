@@ -20,17 +20,17 @@ export const userItems = [
     {
         icon: 'far fa-user',
         label: 'Profile',
+        action: 'redirectToProfile()'
     },
     {
         icon: 'far fa-cog',
         label: 'Settings',
-    },
-    {
-        icon: 'far fa-unlock-alt',
-        label: 'Lock Screen',
+        action: 'redirectToProfile()'
     },
     {
         icon: 'far fa-power-off',
         label: 'Logout',
+        action: ''
     },
 ];
+
