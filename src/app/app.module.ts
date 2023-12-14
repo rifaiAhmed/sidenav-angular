@@ -13,6 +13,8 @@ import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import { HeaderComponent } from './header/header.component';
+import { MatTableModule } from '@angular/material/table'
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { OverlayModule } from '@angular/cdk/overlay'
 import { CdkMenuModule } from '@angular/cdk/menu'
@@ -35,7 +37,9 @@ import { CdkMenuModule } from '@angular/cdk/menu'
     BrowserAnimationsModule,
     AppRoutingModule,
     OverlayModule,
-    CdkMenuModule
+    CdkMenuModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
